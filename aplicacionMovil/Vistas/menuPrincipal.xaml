@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="aplicacionMovil.Vistas.menuPrincipal">
+    <StackLayout BackgroundColor="#288ca4"
+                 Padding="4">
+        
+        <Frame VerticalOptions="FillAndExpand"
+               Margin="20,20,20,40"
+               CornerRadius="25"
+               HasShadow="False">
+            <StackLayout Spacing="20">
+               
+                <Image Source="https://i.ibb.co/DCsN44v/info.png" 
+                       WidthRequest="50"/>
+                <Label Text="Informacion de usuario: "
+                       FontSize="Large" 
+                       HorizontalOptions="Center"/>
+                <Label x:Name="Lable" 
+                       Text="a"
+                       FontAttributes="Bold"
+                       FontSize="20"
+                       HorizontalOptions="Center" />
+                <Button Text="Volver"
+                        TextColor="White"
+                        BackgroundColor="#0067b8"
+                        BorderColor="#0067b8"
+                        CornerRadius="50" 
+                        Clicked="Button_Clicked"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

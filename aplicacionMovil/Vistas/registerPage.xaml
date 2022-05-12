@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="aplicacionMovil.Vistas.registerPage">
+    <Grid BackgroundColor="#08547c">
+        <StackLayout VerticalOptions="Center"
+                     Margin="16">
+            <!--Formulario donde el usuario digita su información-->
+            <Frame CornerRadius="15">
+                <StackLayout Margin="8">
+                    <Image Source="https://i.ibb.co/Jkf4rS9/agregar-usuario-1.png"
+                           WidthRequest="90" />
+                    <Label x:Name="lbl_principal"
+                           Text="Bienvenido. LLene sus datos."
+                           FontSize="Medium" />
+                    <ProgressBar x:Name="progress"
+                                 Progress=".5" />
+                    <Grid>
+                        <Label x:Name="lbl_progress"
+                               Text="0%"
+                               FontSize="Large" />
+                    </Grid>
+                    <Frame HasShadow="False">
+                        <StackLayout>
+                            <Entry x:Name="lbl_usuario"
+                                   Placeholder="Ingrese su Usuario"
+                                   FontSize="Medium"
+                                   Completed="lbl_nombre_Completed"
+                                   TextChanged="lbl_nombre_TextChanged" />
+                            <Entry x:Name="lbl_correo"
+                                   Keyboard="Email"
+                                   Placeholder="Ingrese su correo"
+                                   FontSize="Medium"
+                                   Completed="lbl_correo_Completed" />
+                            <Entry x:Name="lbl_password"
+                                   Placeholder="Ingrese su contraseña"
+                                   FontSize="Medium"
+                                   IsPassword="True"
+                                   Completed="lbl_password_Completed" />
+                            <Entry x:Name="lbl_password2"
+                                   Placeholder="Repita  su contraseña"
+                                   FontSize="Medium"
+                                   IsPassword="True"
+                                   Completed="lbl_password2_Completed" />
+                            <Grid  ColumnDefinitions="auto,*">
+                                <CheckBox x:Name="cbox_terminos"
+                                          IsChecked="False"
+                                          CheckedChanged="cbox_terminos_CheckedChanged"
+                                          Grid.Column="0" />
+                                <Label Text="Acepto los terminos y condiciones"
+                                       Grid.Column="1"
+                                       VerticalOptions="Center" />
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
+                    <Button x:Name="btn_registrar"
+                            TextColor="White"
+                            BackgroundColor="#0067b8"
+                            BorderColor="#0067b8"
+                            Text="Registrar"
+                            FontSize="Large"
+                            Clicked="btn_registrar_Clicked"
+                            CornerRadius="50"
+                            IsEnabled="True"
+                            FontAttributes="Bold"
+                            Padding="8"
+                            Margin="12" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </Grid>
+</ContentPage>
